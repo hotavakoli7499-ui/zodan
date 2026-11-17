@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>قرض‌الحسنه حضرت زینب</title>
+<style>
+:root{color-scheme:light;--bg:#f8faf9;--card:#fff;--tx:#17302c;--mu:#6b7f7b;--pr:#0f766e;--pt:#fff;--bd:#d9e4e1;--bad:#c0392b;--ok:#1a8a4a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.75 Vazirmatn,Tahoma,sans-serif;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+header{background:var(--pr);color:var(--pt);padding:14px 16px;text-align:center;font-weight:700}
+header small{display:block;font-weight:400;opacity:.85;font-size:13px}
+main{padding:14px;max-width:560px;margin:auto}
+h2{font-size:19px;margin:6px 0 10px}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px;margin:10px 0}
+label{display:block;margin:12px 0 4px;color:var(--mu);font-size:14px}
+input,select{width:100%;font:inherit;padding:14px;font-size:18px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+button{font:inherit;border:0;border-radius:12px;padding:13px 16px;background:var(--pr);color:var(--pt);font-weight:700;width:100%;margin-top:12px}
+button.s{background:transparent;color:var(--pr);border:1px solid var(--pr)}
+button.d{background:transparent;color:var(--bad);border:1px solid var(--bad)}
+button.m{width:auto;padding:6px 12px;margin:0;font-size:14px}
+.row{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.g2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.chip{display:inline-block;padding:8px 12px;margin:4px 0 0 6px;border:1px solid var(--bd);border-radius:20px;background:var(--card)}
+.chip.on{background:var(--pr);color:var(--pt);border-color:var(--pr)}
+.mu{color:var(--mu);font-size:14px}.ok{color:var(--ok)}.bad{color:var(--bad)}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:var(--pr)}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--bd);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav a{flex:1;text-align:center;padding:10px 2px;color:var(--mu);font-size:13px}
+nav a b{display:block;font-size:22px;line-height:1.2}nav a.on{color:var(--pr);font-weight:700}
+#md{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;overflow:auto;padding:14px;z-index:9}
+#md .c{max-width:420px;margin:auto}.hint{color:var(--pr);font-size:14px;min-height:22px;margin-top:2px}.sticky{position:sticky;bottom:calc(74px + env(safe-area-inset-bottom,0px));padding-top:8px;background:linear-gradient(transparent,var(--bg) 35%)}.sel{display:flex;justify-content:space-between;align-items:center}.g2b{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pick{padding:14px;margin:8px 0}.seg{display:flex;gap:6px;margin:10px 0}.seg button{margin:0;padding:10px;background:var(--card);color:var(--tx);border:1px solid var(--bd)}.seg button.on{background:var(--pr);color:var(--pt)}.g3{display:flex;gap:6px;margin-top:8px}.g3 button{margin:0;flex:1;padding:9px 4px;font-size:14px}.stat{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;text-align:center}.stat b{display:block;font-size:17px}.win{border-color:var(--ok)}.pick:active{background:var(--bd)}
+.em{text-align:center;color:var(--mu);padding:40px 10px}
+*{-webkit-tap-highlight-color:transparent}body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation}input,select{-webkit-user-select:text;user-select:text}#ri,#md img{-webkit-user-select:auto;user-select:auto;-webkit-touch-callout:default}
+</style>
+</head>
+<body>
+<header>قرض‌الحسنه حضرت زینب (س)<small>روستای زودان · <span id="st"></span></small></header>
+<main id="v"><div class="em">در حال بارگذاری…</div></main>
+<nav id="nv"></nav>
+<div id="md"></div>
+<script>window.onerror=function(m,u,l){var d=document.createElement('pre');d.dir='ltr';d.style.cssText='white-space:pre-wrap;background:#fee;color:#900;padding:10px;margin:10px;font:12px monospace';d.textContent='ERROR: '+m+' (line '+l+')';document.body.appendChild(d)};window.addEventListener('unhandledrejection',function(e){window.onerror(String(e.reason&&e.reason.message||e.reason),'',0)})</script>
+<script>(function(){
+
+const $=id=>document.getElementById(id);
+const E=s=>String(s).replace(/[۰-۹]/g,c=>c.charCodeAt(0)-1776).replace(/[٠-٩]/g,c=>c.charCodeAt(0)-1632);
+const N=s=>parseInt(E(s).replace(/[^\d]/g,''))||0;
+const FD=s=>String(s).replace(/\d/g,c=>'۰۱۲۳۴۵۶۷۸۹'[c]);
+const F=n=>Number(n).toLocaleString('fa-IR');
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const L=(a,f)=>a.map(f).join('');
+const MN=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+const ds=d=>`${d.y}/${String(d.m).padStart(2,0)}/${String(d.d).padStart(2,0)}`;
+const dk=d=>d.y*10000+d.m*100+d.d;
+const today=()=>{const p=new Intl.DateTimeFormat('en-US-u-ca-persian-nu-latn',{year:'numeric',month:'numeric',day:'numeric'}).formatToParts(new Date());const g=t=>+p.find(x=>x.type===t||(t==='year'&&x.type==='relatedYear')).value;return{y:g('year'),m:g('month'),d:g('day')}};
+const pd=s=>{const a=E(s).split(/\D+/).filter(Boolean).map(Number);if(a.length<3||a[0]<1300||a[1]<1||a[1]>12||a[2]<1||a[2]>31)return null;return{y:a[0],m:a[1],d:a[2]}};
+const API_URL='https://script.google.com/macros/s/AKfycbwn_OSsJhJfsIPF9m7807yh2MJ0gG6me8QhMzpm9q2eQ7-mP_CpgjoolHz-INSft8OLcw/exec';
+const GS=window.google&&google.script&&google.script.run;
+const REMOTE=!!(GS||API_URL);
+const lg=k=>{try{return localStorage.getItem(k)}catch(e){return null}},ls=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+let S,PIN=lg('zq_pin')||'',VER=+lg('zq_ver')||0,dirty=lg('zq_d')=='1',busy=false,seq=0;
+try{S=JSON.parse(lg('zq'))}catch(e){}
+S=S||{funds:[],members:[],pay:[],win:[]};S.del=S.del||[];
+const call=(op,a,b,c)=>GS?new Promise((ok,no)=>GS.withSuccessHandler(ok).withFailureHandler(no).api(op,PIN,a,b,c)):fetch(API_URL,{method:'POST',body:JSON.stringify({op,pin:PIN,a,b,c})}).then(r=>r.json());
+const st=t=>{const e=$('st');if(e)e.textContent=t};
+const save=()=>{ls('zq',JSON.stringify(S));if(!REMOTE)return;seq++;dirty=true;ls('zq_d','1');st('⏳ در حال ذخیره…');push()};
+function merge(T){const dl=new Set([...(S.del||[]),...(T.del||[])]);S.del=[...dl];['funds','members','pay','win'].forEach(k=>{const ids=new Set(S[k].map(x=>x.id));(T[k]||[]).forEach(x=>{if(!ids.has(x.id)&&!dl.has(x.id))S[k].push(x)})})}
+async function push(){if(busy||!dirty||!PIN)return;busy=true;let conf=0,good=false;
+ try{for(const k of ['pay','win'])for(const x of S[k])if(x.img&&x.img.startsWith('data:')){const fo=fund(x.fid),me=mem(x.mid),r=await call('img',x.img,(x.dt||'').replace(/\//g,'-')+'_'+(k=='pay'?'قسط-':'برنده-ماه-')+(x.i+1)+'_'+x.id+'.jpg',{fund:fo?fo.name:'',member:me?me.code+' - '+me.name:'',kind:k=='pay'?'in':'win'});if(r.err=='pin'){busy=false;return askPin()}if(!r.ok)throw r;x.img='drv:'+r.id;ls('zq',JSON.stringify(S))}
+  const my=seq;let r=await call('save',JSON.stringify(S),VER);
+  if(r.err=='conflict'){merge(r.data);r=await call('save',JSON.stringify(S),r.ver);conf=1}
+  if(r.err=='pin'){busy=false;return askPin()}
+  if(!r.ok)throw r;VER=r.ver;ls('zq_ver',VER);ls('zq',JSON.stringify(S));
+  if(seq==my){dirty=false;ls('zq_d','0');st('✓ ذخیره شد')}
+  good=true;if(conf)r()}
+ catch(e){st('⚠ آفلاین؛ بعداً ذخیره می‌شود')}
+ busy=false;if(good&&dirty)setTimeout(push,1500)}
+async function pull(){try{const x=await call('load');if(x.err=='pin')return askPin();
+ if(dirty){merge(x.data);VER=x.ver;ls('zq_ver',VER);push();r();return}
+ if(x.ver==VER){st('✓ به‌روز');return}
+ S=x.data;S.del=S.del||[];VER=x.ver;ls('zq_ver',VER);ls('zq',JSON.stringify(S));st('✓ به‌روز');r()}catch(e){st('⚠ آفلاین')}}
+function askPin(){$('md').style.display='block';$('md').innerHTML=`<div class="c"><h2>رمز ورود</h2><input id="pn" type="password" inputmode="numeric" placeholder="رمز را وارد کنید"><div class="bad" id="pe"></div><button onclick="setPin()">ورود</button></div>`}
+async function setPin(){PIN=E($('pn').value.trim());try{const x=await call('load');if(x.err=='pin'){$('pe').textContent='رمز اشتباه است';return}ls('zq_pin',PIN);cl();pull()}catch(e){$('pe').textContent='اتصال برقرار نشد'}}
+function boot(){sync();if(!REMOTE)return;if(!PIN)return askPin();pull();document.addEventListener('visibilitychange',()=>{if(!document.hidden&&PIN)dirty?push():pull()})}
+const uid=()=>Math.random().toString(36).slice(2,9);
+const fund=id=>S.funds.find(f=>f.id==id),mem=id=>S.members.find(m=>m.id==id);
+const mems=fid=>S.members.filter(m=>m.fid==fid);
+const due=(f,i)=>{let m=f.s.m-1+i;const y=f.s.y+Math.floor(m/12);m=m%12+1;return{y,m,d:Math.min(f.s.d,m<7?31:m<12?30:29)}};
+const fee=(f,i)=>Math.max(0,f.f0-f.fs*i);
+const pays=(fid,mid)=>S.pay.filter(p=>p.fid==fid&&p.mid==mid);
+const paid=(fid,mid)=>pays(fid,mid).reduce((a,p)=>a+p.a,0);
+const paidI=(fid,mid,i)=>pays(fid,mid).filter(p=>p.i==i).reduce((a,p)=>a+p.a,0);
+const dl=d=>`${FD(d.d)} ${MN[d.m-1]} ${FD(d.y)}`;
+const V={t:'rec',fid:'',mid:'',ed:'',wi:-1,rs:'mem'},D={};
+const empty=t=>`<div class="em">${t}</div>`;
+const fsel=(h)=>{const f=fund(V.fid)||S.funds[0];if(f)V.fid=f.id;return `<label>صندوق</label><select onchange="V.fid=this.value;V.mid='';D.mid='';D.i='';${h}">${L(S.funds,x=>`<option value="${x.id}" ${x.id==V.fid?'selected':''}>${esc(x.name)}</option>`)}</select>`};
+function go(t){location.hash=t}
+function sync(){const h=location.hash.slice(1)||'rec',a=h.split('-'),t=a[0];V.t=['rec','fnd','win','rep'].includes(t)?t:'rec';if(a[1]!='d')V.mid='';if(a[1]!='e')V.ed='';V.wi=-1;cl();r()}
+addEventListener('hashchange',sync);
+function r(){
+ const T=[['rec','🧾','رسید جدید'],['fnd','🏦','صندوق‌ها'],['win','🏆','برندگان'],['rep','📊','گزارش']];
+ $('nv').innerHTML=L(T,x=>`<a class="${V.t==x[0]?'on':''}" onclick="go('${x[0]}')"><b>${x[1]}</b>${x[2]}</a>`);
+ $('v').innerHTML={rec:recT,fnd:fndT,win:winT,rep:repT}[V.t]();
+ if(V.t=='rec')list();if(V.t=='fnd')fl();if(V.t=='rep')rl();
+ scrollTo(0,0)}
+/* ---------- receipt ---------- */
+function recT(){
+ if(!S.funds.length)return empty('ابتدا از تب «صندوق‌ها» یک صندوق بسازید و عضو اضافه کنید.');
+ const f=fund(V.fid)||S.funds[0];V.fid=f.id;const m=mem(D.mid);
+ const fs=S.funds.length>1?`<select onchange="V.fid=this.value;D.mid='';D.i='';r()">${L(S.funds,x=>`<option value="${x.id}" ${x.id==f.id?'selected':''}>${esc(x.name)}</option>`)}</select>`:'';
+ if(!m)return `<h2>رسید جدید – انتخاب عضو</h2>${fs}<input id="q" placeholder="🔍 نام یا کد عضو را بنویسید" value="${esc(D.q||'')}" oninput="D.q=this.value;list()" style="margin-top:10px"><div id="ml"></div>`;
+ if(D.i===''||D.i===undefined){let k=0;while(k<f.n&&paidI(f.id,m.id,k)>=f.a)k++;D.i=Math.min(k,f.n-1)}
+ if(D.a===undefined)D.a=f.a;
+ return `<div class="c sel"><div><b>${esc(m.name)}</b><div class="mu">کد ${FD(m.code)} – تاکنون ${F(paid(f.id,m.id))} ریال</div></div><button class="s m" onclick="D.mid='';D.i='';r()">تغییر</button></div>
+ <label>قسط</label><select onchange="D.i=+this.value">${L([...Array(f.n).keys()],i=>`<option value="${i}" ${D.i==i?'selected':''}>${FD(i+1)} – ${dl(due(f,i))} ${paidI(f.id,m.id,i)>=f.a?'✓':''}</option>`)}</select>
+ <label>مبلغ (ریال)</label><input inputmode="numeric" value="${F(D.a)}" oninput="mny(this,'a')"><div class="hint" id="h_a">${F(Math.round(D.a/10))} تومان</div>
+ <label>تاریخ دریافت</label><input inputmode="numeric" value="${FD(D.dt||ds(today()))}" oninput="D.dt=this.value">
+ <label>عکس رسید</label>${photoUI('img')}
+ <input placeholder="توضیحات (اختیاری)" value="${esc(D.nt||'')}" oninput="D.nt=this.value" style="margin-top:10px">
+ <div class="sticky"><button onclick="savePay()">✓ ذخیره رسید</button></div>`}
+function list(){const el=$('ml');if(!el)return;const f=fund(V.fid),q=E(D.q||'').trim();
+ const a=mems(f.id).filter(m=>!q||m.name.includes(q)||String(m.code)===q).slice(0,30);
+ el.innerHTML=L(a,m=>`<div class="c pick row" onclick="D.mid='${m.id}';D.i='';r()"><b>${FD(m.code)} – ${esc(m.name)}</b><span class="mu">${F(paid(f.id,m.id))}</span></div>`)||'<div class="em">عضوی پیدا نشد</div>'}
+const photoUI=k=>`<div class="g2b"><button class="s" onclick="$('c_${k}').click()">📷 گرفتن عکس</button><button class="s" onclick="$('g_${k}').click()">🖼 از گالری</button></div><input hidden id="c_${k}" type="file" accept="image/*" capture="environment" onchange="pickP(this,'${k}')"><input hidden id="g_${k}" type="file" accept="image/*" onchange="pickP(this,'${k}')"><div id="pi_${k}">${D[k]?`<img src="${D[k]}" style="height:90px;border-radius:8px;margin-top:8px">`:'<div class="mu">تصویری پیوست نشده</div>'}</div>`;
+async function pickP(el,k){const v=await comp(el.files[0]);D[k]=v;$('pi_'+k).innerHTML=v?`<img src="${v}" style="height:90px;border-radius:8px;margin-top:8px">`:'<div class="bad">خطا در خواندن تصویر</div>'}
+function mny(el,k){const n=N(el.value);el.value=n?F(n):'';D[k]=n;const e=$('h_'+k);if(e)e.textContent=n?F(Math.round(n/10))+' تومان':''}
+async function pick(el){D.img=await comp(el.files[0]);$('pi').textContent=D.img?'✓ تصویر پیوست شد':'خطا در تصویر'}
+const comp=file=>new Promise(r=>{if(!file)return r('');const fr=new FileReader();fr.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,900/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);r(c.toDataURL('image/jpeg',.7))};i.onerror=()=>r('');i.src=fr.result};fr.readAsDataURL(file)});
+function savePay(){const f=fund(V.fid),a=N(D.a??f.a),d=pd(D.dt||ds(today()));
+ if(!a)return alert('مبلغ را وارد کنید');if(!d)return alert('تاریخ را به شکل ۱۴۰۵/۰۷/۲۰ وارد کنید');
+ const p={id:uid(),fid:f.id,mid:D.mid,i:+D.i,a,dt:ds(d),img:D.img||'',nt:D.nt||''};
+ S.pay.push(p);save();D.mid='';D.i='';D.a=undefined;D.img='';D.nt='';D.q='';r();openR(p.id)}
+/* ---------- receipt image ---------- */
+function openR(id){const p=S.pay.find(x=>x.id==id);if(!p)return;
+ $('md').style.display='block';
+ $('md').innerHTML=`<div class="c"><img id="ri" style="width:100%;border-radius:10px;min-height:200px"><canvas id="cv" style="display:none"></canvas><button onclick="saveR()">⬇ ذخیره در گالری</button><button class="s" onclick="shareR()">📤 ارسال (واتساپ، تلگرام…)</button>${p.img?`<button class="s" onclick="viewI('${p.id}')">عکس رسید پیوست‌شده</button>`:''}<div class="mu" style="text-align:center;margin-top:8px">اگر ذخیره نشد، انگشت را روی تصویر نگه دارید و «ذخیره تصویر» را بزنید.</div><button class="d" onclick="delP('${p.id}')">🗑 حذف این رسید</button><button class="s" onclick="cl()">بستن</button></div>`;draw(p);R={n:'receipt-'+p.dt.replace(/\//g,'-')+'.png'}}
+let R={};
+const cl=()=>{$('md').style.display='none'};
+async function viewI(id){const p=S.pay.find(x=>x.id==id)||S.win.find(x=>x.id==id);let u=p.img;$('md').style.display='block';
+ $('md').innerHTML='<div class="c"><div class="em" id="vi">در حال بارگذاری…</div><button class="s" onclick="cl()">بستن</button></div>';
+ if(u.startsWith('drv:')){try{const x=await call('getimg',u.slice(4));u=x.ok?x.data:''}catch(e){u=''}}
+ $('vi').outerHTML=u?`<img src="${u}" style="width:100%;border-radius:10px">`:'<div class="bad em">تصویر در دسترس نیست (آفلاین؟)</div>'}
+async function draw(p){const f=fund(p.fid),m=mem(p.mid);
+ try{await document.fonts.load('30px Vazirmatn')}catch(e){}
+ const c=$('cv'),x=c.getContext('2d'),ff='Vazirmatn,Tahoma,sans-serif';c.width=800;c.height=860;
+ const tot=paid(f.id,m.id),rem=Math.max(0,f.n*f.a-tot);
+ x.fillStyle='#fff';x.fillRect(0,0,800,860);x.fillStyle='#0f766e';x.fillRect(0,0,800,190);
+ x.direction='rtl';x.textAlign='center';x.fillStyle='#fff';
+ x.font='bold 40px '+ff;x.fillText('قرض‌الحسنه حضرت زینب (س)',400,72);
+ x.font='28px '+ff;x.fillText('روستای زودان',400,112);x.fillText('رسید دریافت قسط',400,160);
+ const rows=[['صندوق',f.name],['نام عضو',`${m.name} (کد ${FD(m.code)})`],['شماره تماس',FD(m.phone||'—')],
+ ['قسط',`شماره ${FD(p.i+1)} از ${FD(f.n)} – ${dl(due(f,p.i))}`],['مبلغ پرداخت‌شده',F(p.a)+' ریال'],['تاریخ دریافت',dl(pd(p.dt))],
+ ['جمع پرداختی تا امروز',F(tot)+' ریال'],['مانده اقساط',F(rem)+' ریال']];
+ rows.forEach((r,i)=>{const y=250+i*68;x.textAlign='right';x.fillStyle='#6b7f7b';x.font='26px '+ff;x.fillText(r[0],760,y);
+  x.fillStyle='#17302c';x.font='bold 28px '+ff;x.textAlign='left';x.direction='rtl';x.fillText(r[1],40,y);
+  x.fillStyle='#d9e4e1';x.fillRect(40,y+48,720,2)});
+ x.textAlign='center';x.fillStyle='#1a8a4a';x.font='bold 32px '+ff;x.fillText('✓ این پرداخت ثبت شد',400,820);$('ri').src=c.toDataURL('image/png')}
+const cb=()=>new Promise(r=>$('cv').toBlob(r,'image/png'));
+async function saveR(){const b=await cb();
+ try{const d=window.claude&&await claude.use('downloads');if(d){await d.save({filename:R.n,data:b});return}}catch(e){}
+ const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=R.n;document.body.appendChild(a);a.click();a.remove()}
+async function shareR(){const b=await cb(),fl=new File([b],R.n,{type:'image/png'});
+ if(navigator.canShare&&navigator.canShare({files:[fl]})){try{await navigator.share({files:[fl]});return}catch(e){if(e.name=='AbortError')return}}
+ saveR()}
+/* ---------- funds ---------- */
+function fndT(){
+ if(V.ed)return fundForm();
+ const f=fund(V.fid)||S.funds[0];if(f)V.fid=f.id;
+ return `<h2>صندوق‌ها</h2>${L(S.funds,x=>`<div class="c" onclick="V.fid='${x.id}';r()" style="${x.id==V.fid?'border-color:var(--pr)':''}"><b>${esc(x.name)}</b><div class="mu">${FD(x.n)} قسط ${F(x.a)} ریالی – شروع ${dl(x.s)} – ${FD(x.w)} برنده در ماه</div></div>`)}
+ <button onclick="V.ed='new';location.hash='fnd-e'">+ صندوق جدید</button>
+ ${f?`<h2 style="margin-top:22px">اعضای «${esc(f.name)}»</h2><div class="c"><input placeholder="🔍 جستجوی عضو (نام، کد، تلفن)" value="${esc(D.fq||'')}" oninput="D.fq=this.value;fl()"><div id="fml"></div>
+ <label>نام و نام خانوادگی</label><input id="mn"><label>شماره تماس</label><input id="mp" inputmode="tel"><label>کد عضو (خالی = خودکار)</label><input id="mc" inputmode="numeric">
+ <button onclick="addM()">افزودن عضو</button></div>
+ <button class="s" onclick="V.ed='edit';location.hash='fnd-e'">ویرایش مشخصات صندوق</button><button class="d" onclick="delF()">حذف صندوق</button>`:''}
+ <h2 style="margin-top:22px">پشتیبان‌گیری</h2><div class="c"><div class="mu">اطلاعات روی همین گوشی ذخیره می‌شود. هر چند وقت یک بار فایل پشتیبان بگیرید.</div><button onclick="bk()">گرفتن فایل پشتیبان</button><label>بازیابی از فایل</label><input type="file" accept=".json" onchange="rs(this)"></div>`}
+function fundForm(){const e=V.ed=='edit'?fund(V.fid):{name:'',n:15,s:{y:today().y,m:7,d:20},a:'',w:1,f0:0,fs:0};
+ return `<h2>${V.ed=='edit'?'ویرایش':'تعریف'} صندوق</h2><div class="c"><label>نام صندوق</label><input id="fn" value="${esc(e.name)}">
+ <label>تعداد اقساط (ماه)</label><input id="fc" inputmode="numeric" value="${e.n}">
+ <label>تاریخ شروع (شمسی)</label><div class="g2"><input id="fd" inputmode="numeric" value="${e.s.d}" placeholder="روز"><select id="fm">${L(MN,(n,i)=>`<option value="${i+1}" ${e.s.m==i+1?'selected':''}>${n}</option>`)}</select><input id="fy" inputmode="numeric" value="${e.s.y}" placeholder="سال"></div>
+ <label>مبلغ هر قسط (ریال)</label><input id="fa" inputmode="numeric" value="${e.a?F(e.a):''}" oninput="mny(this,'fa')"><div class="hint" id="h_fa"></div>
+ <label>تعداد برنده در هر ماه</label><input id="fw" inputmode="numeric" value="${e.w}">
+ <label>کارمزد ماه اول از برنده (ریال)</label><input id="f0" inputmode="numeric" value="${e.f0?F(e.f0):''}" oninput="mny(this,'f0')"><div class="hint" id="h_f0"></div>
+ <label>کاهش کارمزد در هر ماه (ریال، برای ثابت: ۰)</label><input id="fs" inputmode="numeric" value="${e.fs?F(e.fs):''}" oninput="mny(this,'fs')"><div class="hint" id="h_fs"></div>
+ <div class="mu" style="margin-top:8px">مثال: ۴٬۰۰۰٬۰۰۰ و کاهش ۱۰۰٬۰۰۰ ← ماه دوم ۳٬۹۰۰٬۰۰۰، ماه سوم ۳٬۸۰۰٬۰۰۰</div>
+ <button onclick="saveF()">ذخیره</button><button class="s" onclick="history.back()">انصراف</button></div>`}
+function saveF(){const g=i=>$(i).value,s={y:N(g('fy')),m:+g('fm'),d:N(g('fd'))};
+ const o={name:g('fn').trim(),n:N(g('fc')),s,a:N(g('fa')),w:N(g('fw'))||1,f0:N(g('f0')),fs:N(g('fs'))};
+ if(!o.name||!o.n||!o.a||s.y<1300||s.d<1||s.d>31)return alert('نام، تعداد قسط، مبلغ و تاریخ شروع را کامل وارد کنید');
+ if(V.ed=='edit')Object.assign(fund(V.fid),o);else{o.id=uid();S.funds.push(o);V.fid=o.id}
+ V.ed='';save();history.back()}
+function addM(){const f=fund(V.fid),n=$('mn').value.trim();if(!n)return alert('نام را وارد کنید');
+ const c=N($('mc').value)||Math.max(0,...mems(f.id).map(m=>m.code))+1;
+ S.members.push({id:uid(),fid:f.id,code:c,name:n,phone:E($('mp').value.trim())});save();r()}
+function delM(id){if(S.pay.some(p=>p.mid==id)||S.win.some(p=>p.mid==id))return alert('این عضو رسید ثبت‌شده دارد و حذف نمی‌شود');if(confirm('حذف شود؟')){S.del.push(id);S.members=S.members.filter(m=>m.id!=id);save();r()}}
+function delF(){if(confirm('صندوق و همه رسیدها و اعضای آن پاک شود؟')){const id=V.fid;['members','pay','win'].forEach(k=>S[k].filter(x=>x.fid==id).forEach(x=>S.del.push(x.id)));S.del.push(id);S.funds=S.funds.filter(f=>f.id!=id);['members','pay','win'].forEach(k=>S[k]=S[k].filter(x=>x.fid!=id));V.fid='';save();r()}}
+async function bk(){const b=new Blob([JSON.stringify(S)],{type:'application/json'});
+ try{const d=window.claude&&await claude.use('downloads');if(d){await d.save({filename:'zodaneh-backup.json',data:b});return}}catch(e){}alert('ذخیره فایل در این حالت ممکن نیست')}
+function rs(el){const f=el.files[0];if(!f)return;const fr=new FileReader();fr.onload=()=>{try{const o=JSON.parse(fr.result);if(!o.funds)throw 0;if(confirm('اطلاعات فعلی با فایل جایگزین شود؟')){S=o;save();r()}}catch(e){alert('فایل معتبر نیست')}};fr.readAsText(f)}
+/* ---------- winners ---------- */
+function winT(){
+ if(!S.funds.length)return empty('ابتدا یک صندوق بسازید.');
+ const h=fsel('r()'),f=fund(V.fid);
+ return `<h2>برندگان قرعه‌کشی</h2><div class="c">${h}</div>`+L([...Array(f.n).keys()],i=>{
+  const w=S.win.filter(x=>x.fid==f.id&&x.i==i),open=V.wi==i,pot=f.n*f.a-fee(f,i);
+  return `<div class="c"><div class="row"><b>ماه ${FD(i+1)} – ${dl(due(f,i))}</b><span class="mu">${w.length}/${FD(f.w)}</span></div>
+  <div class="mu">کارمزد ${F(fee(f,i))} – مبلغ پرداختی به برنده ${F(pot)} ریال</div>
+  ${L(w,x=>`<div class="row" style="padding-top:8px"><span class="ok">🏆 ${esc(mem(x.mid)?.name)} <span class="mu">${FD(x.dt)}</span></span>${x.img?`<button class="s m" onclick="viewI('${x.id}')">مدرک</button>`:''}<button class="d m" onclick="delW('${x.id}')">حذف</button></div>`)}
+  ${open?winForm(f,i):(w.length<f.w?`<button class="s" onclick="V.wi=${i};D.wm='';D.wimg='';r()">ثبت برنده این ماه</button>`:'')}</div>`})}
+function winForm(f,i){const won=S.win.filter(x=>x.fid==f.id).map(x=>x.mid),el=mems(f.id).filter(m=>!won.includes(m.id));
+ return `<label>برنده</label><input placeholder="🔍 جستجوی نام یا کد" oninput="wf(this.value)"><select id="wsl" style="margin-top:6px" onchange="D.wm=this.value"><option value="">انتخاب کنید</option>${L(el,m=>`<option value="${m.id}">${FD(m.code)} – ${esc(m.name)}</option>`)}</select>
+ <label>تاریخ پرداخت به برنده</label><input inputmode="numeric" id="wd" value="${FD(ds(today()))}">
+ <label>مدرک پرداخت (چک، انتقال، رسید)</label>${photoUI('wimg')}
+ <button onclick="saveW(${i})">ذخیره برنده</button><button class="s" onclick="V.wi=-1;r()">انصراف</button>`}
+async function pickW(el){D.wimg=await comp(el.files[0]);$('wp').textContent=D.wimg?'✓ پیوست شد':'خطا در تصویر'}
+function saveW(i){const d=pd($('wd').value);if(!D.wm)return alert('برنده را انتخاب کنید');if(!d)return alert('تاریخ نامعتبر است');
+ S.win.push({id:uid(),fid:V.fid,mid:D.wm,i,dt:ds(d),img:D.wimg||''});V.wi=-1;save();r()}
+/* ---------- reports ---------- */
+const seg=(cur,arr)=>`<div class="seg">${L(arr,a=>`<button class="${cur==a[0]?'on':''}" onclick="V.rs='${a[0]}';D.rq='';r()">${a[1]}</button>`)}</div>`;
+function repT(){
+ if(!S.funds.length)return empty('هنوز صندوقی ثبت نشده.');
+ const h=fsel("V.mid='';r()"),f=fund(V.fid);
+ if(V.mid&&mem(V.mid))return memRep(f,mem(V.mid));
+ const ms=mems(f.id),tot=f.n*f.a,got=S.pay.filter(p=>p.fid==f.id).reduce((a,p)=>a+p.a,0),out=S.win.filter(w=>w.fid==f.id).length;
+ return `<h2>گزارش</h2><div class="c">${h}<div class="stat" style="margin-top:10px"><div><span class="mu">دریافتی</span><b>${F(got)}</b></div><div><span class="mu">مانده</span><b>${F(Math.max(0,tot*ms.length-got))}</b></div><div><span class="mu">برندگان</span><b>${FD(out)}</b></div></div></div>
+ ${seg(V.rs,[['mem','اعضا'],['in','دریافتی‌ها'],['out','پرداختی‌ها']])}
+ <input id="rq" placeholder="🔍 جستجو (نام، کد، مبلغ، تاریخ)" value="${esc(D.rq||'')}" oninput="D.rq=this.value;rl()"><div id="rl"></div>`}
+function fl(){const el=$('fml'),f=fund(V.fid);if(!el||!f)return;const q=E(D.fq||'').trim();
+ const a=mems(f.id).filter(m=>!q||m.name.includes(q)||String(m.code)==q||E(m.phone||'').includes(q));
+ el.innerHTML=L(a,m=>`<div class="row" style="padding:8px 0;border-bottom:1px solid var(--bd)"><span>${FD(m.code)} – ${esc(m.name)}<span class="mu"> ${FD(m.phone||'')}</span></span><button class="d m" onclick="delM('${m.id}')">حذف</button></div>`)||'<div class="mu">عضوی پیدا نشد</div>'}
+function wf(q){const f=fund(V.fid),won=S.win.filter(x=>x.fid==f.id).map(x=>x.mid);q=E(q).trim();
+ $('wsl').innerHTML='<option value="">انتخاب کنید</option>'+L(mems(f.id).filter(m=>!won.includes(m.id)&&(!q||m.name.includes(q)||String(m.code)==q)),m=>`<option value="${m.id}">${FD(m.code)} – ${esc(m.name)}</option>`)}
+function delP(id){if(!confirm('این رسید حذف شود؟\n(عکس آن در گوگل‌درایو می‌ماند)'))return;S.pay=S.pay.filter(x=>x.id!=id);S.del.push(id);save();cl();r()}
+function delW(id){if(!confirm('ثبت این برنده حذف شود؟\n(مدرک آن در گوگل‌درایو می‌ماند)'))return;S.win=S.win.filter(x=>x.id!=id);S.del.push(id);save();r()}
+function quick(mid,i){D.mid=mid;D.i=i;D.a=undefined;location.hash='rec'}
+const btns=(x,kind)=>`<div class="g3">${kind=='p'?`<button class="s m" onclick="openR('${x.id}')">رسید</button>`:''}${x.img?`<button class="s m" onclick="viewI('${x.id}')">${kind=='p'?'عکس':'مدرک'}</button>`:''}<button class="d m" onclick="${kind=='p'?'delP':'delW'}('${x.id}')">حذف</button></div>`;
+function rl(){const el=$('rl'),f=fund(V.fid);if(!el||!f)return;const q=E(D.rq||'').trim(),t=dk(today()),tot=f.n*f.a;
+ const hit=(m,x)=>!q||m.name.includes(q)||String(m.code)==q||(x||'').includes(q);
+ if(V.rs=='mem'){el.innerHTML=L(mems(f.id).filter(m=>hit(m)),m=>{const p=paid(f.id,m.id),pc=Math.min(100,Math.round(p/tot*100)),late=[...Array(f.n).keys()].filter(i=>dk(due(f,i))<t&&paidI(f.id,m.id,i)<f.a).length,w=S.win.some(x=>x.fid==f.id&&x.mid==m.id);
+  return `<div class="c" onclick="V.mid='${m.id}';location.hash='rep-d'"><div class="row"><b>${FD(m.code)} – ${esc(m.name)}</b><span class="mu">${FD(pc)}٪</span></div><div class="bar"><i style="width:${pc}%"></i></div><div class="mu">پرداخت: ${F(p)} – مانده: ${F(Math.max(0,tot-p))}</div>${late?`<div class="bad">${FD(late)} قسط عقب‌افتاده</div>`:''}${w?'<div class="ok">🏆 برنده شده</div>':''}</div>`})||'<div class="em">عضوی پیدا نشد</div>';return}
+ if(V.rs=='in'){const a=S.pay.filter(p=>p.fid==f.id&&hit(mem(p.mid)||{name:'',code:''},p.dt+' '+p.a+' '+(p.i+1))).sort((x,y)=>y.dt.localeCompare(x.dt));
+  el.innerHTML=(a.length?`<div class="mu">${FD(a.length)} رسید – جمع ${F(a.reduce((s,p)=>s+p.a,0))} ریال</div>`:'')+L(a,p=>{const m=mem(p.mid)||{};return `<div class="c"><div class="row"><b>${esc(m.name)} <span class="mu">کد ${FD(m.code)}</span></b><b>${F(p.a)}</b></div><div class="mu">${dl(pd(p.dt))} – قسط ${FD(p.i+1)}</div>${btns(p,'p')}</div>`})||'<div class="em">رسیدی پیدا نشد</div>';return}
+ const a=S.win.filter(w=>w.fid==f.id&&hit(mem(w.mid)||{name:'',code:''},w.dt+' '+(w.i+1))).sort((x,y)=>y.dt.localeCompare(x.dt));
+ el.innerHTML=L(a,w=>{const m=mem(w.mid)||{};return `<div class="c win"><div class="row"><b>🏆 ${esc(m.name)} <span class="mu">کد ${FD(m.code)}</span></b><b>${F(f.n*f.a-fee(f,w.i))}</b></div><div class="mu">ماه ${FD(w.i+1)} – ${dl(pd(w.dt))}</div>${btns(w,'w')}</div>`})||'<div class="em">پرداختی ثبت نشده</div>'}
+function memRep(f,m){const t=dk(today()),tot=f.n*f.a,p=paid(f.id,m.id),pc=Math.min(100,Math.round(p/tot*100)),np=[...Array(f.n).keys()].filter(i=>paidI(f.id,m.id,i)>=f.a).length,ws=S.win.filter(w=>w.fid==f.id&&w.mid==m.id);
+ return `<button class="s m" onclick="history.back()">← بازگشت</button><h2>${esc(m.name)} <span class="mu">کد ${FD(m.code)}</span></h2>
+ <div class="c"><div class="stat"><div><span class="mu">پرداخت‌شده</span><b class="ok">${F(p)}</b></div><div><span class="mu">مانده</span><b class="bad">${F(Math.max(0,tot-p))}</b></div><div><span class="mu">قسط</span><b>${FD(np)}/${FD(f.n)}</b></div></div><div class="bar"><i style="width:${pc}%"></i></div><div class="mu" style="margin-top:6px">تماس: ${FD(m.phone||'—')}</div></div>
+ ${L(ws,w=>`<div class="c win"><b>🏆 برنده ماه ${FD(w.i+1)}</b><div class="mu">${dl(pd(w.dt))} – پرداخت ${F(f.n*f.a-fee(f,w.i))} ریال</div>${btns(w,'w')}</div>`)}`+
+ L([...Array(f.n).keys()],i=>{const a=paidI(f.id,m.id,i),dd=due(f,i),ok=a>=f.a,late=!ok&&dk(dd)<t,ps=pays(f.id,m.id).filter(x=>x.i==i);
+  return `<div class="c"><div class="row"><span>قسط ${FD(i+1)} – ${dl(dd)}</span><b class="${ok?'ok':late?'bad':'mu'}">${ok?'✓ پرداخت شد':late?'عقب‌افتاده':'در انتظار'}</b></div>${L(ps,x=>`<div class="mu" style="margin-top:6px">${F(x.a)} ریال – ${FD(x.dt)}</div>${btns(x,'p')}`)}${ok?'':`<button class="s m" style="margin-top:8px;width:100%" onclick="quick('${m.id}',${i})">+ ثبت رسید این قسط</button>`}</div>`})}
+
+try{window.$=$}catch(e){};try{window.D=D}catch(e){};try{window.V=V}catch(e){};try{window.addM=addM}catch(e){};try{window.bk=bk}catch(e){};try{window.cl=cl}catch(e){};try{window.delF=delF}catch(e){};try{window.delM=delM}catch(e){};try{window.delP=delP}catch(e){};try{window.delW=delW}catch(e){};try{window.fl=fl}catch(e){};try{window.go=go}catch(e){};try{window.list=list}catch(e){};try{window.mny=mny}catch(e){};try{window.openR=openR}catch(e){};try{window.pickP=pickP}catch(e){};try{window.quick=quick}catch(e){};try{window.r=r}catch(e){};try{window.rl=rl}catch(e){};try{window.rs=rs}catch(e){};try{window.saveF=saveF}catch(e){};try{window.savePay=savePay}catch(e){};try{window.saveR=saveR}catch(e){};try{window.saveW=saveW}catch(e){};try{window.setPin=setPin}catch(e){};try{window.shareR=shareR}catch(e){};try{window.viewI=viewI}catch(e){};try{window.wf=wf}catch(e){};
+boot();
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+
+})();</script>
+</body>
+</html>
